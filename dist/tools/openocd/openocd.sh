@@ -354,9 +354,6 @@ do_flash() {
             -c 'gdb_port 0' \
             -c 'init' \
             -c 'targets' \
-			-c 'reset halt' \
-			-c 'stm32f1x unlock 0' \
-			-c 'reset halt' \
             -c 'reset halt' \
             ${OPENOCD_PRE_FLASH_CMDS} \
             -c 'flash write_image erase \"${IMAGE_FILE}\" ${IMAGE_OFFSET} ${IMAGE_TYPE}' \
