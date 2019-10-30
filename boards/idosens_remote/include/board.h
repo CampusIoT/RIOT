@@ -70,9 +70,9 @@ extern "C" {
  */
 
 #define SX127X_PARAM_SPI                    (SPI_DEV(0))
-#define SX127X_PARAM_SPI_NSS                GPIO_PIN(PORT_B, 2)
+#define SX127X_PARAM_SPI_NSS                GPIO_PIN(PORT_A, 12)
 
-#define SX127X_PARAM_RESET                  GPIO_PIN(PORT_A, 12)
+#define SX127X_PARAM_RESET                  GPIO_PIN(PORT_B, 2)
 #define SX127X_PARAM_DIO0                   GPIO_PIN(PORT_B, 10)
 #define SX127X_PARAM_DIO1                   GPIO_PIN(PORT_B, 11)
 #define SX127X_PARAM_DIO2                   GPIO_PIN(PORT_B, 12)
