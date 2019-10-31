@@ -73,14 +73,56 @@ extern "C" {
 
 //Boutons
 
-
+#define BOUTON_VOLUME_PLUS_PIN			GPIO_PIN(PORT_D, 5)
+#define BOUTON_VOLUME_PLUS_MODE  		GPIO_IN
+#define BOUTON_VOLUME_MINUS_PIN			GPIO_PIN(PORT_D, 6)
+#define BOUTON_VOLUME_MINUS_MODE		GPIO_IN
+#define BOUTON_MODE_PIN 				GPIO_PIN(PORT_D, 8)
+#define BOUTON_MODE_MODE 				GPIO_IN
+#define BOUTON_FRONT_PIN 				GPIO_PIN(PORT_D, 15)
+#define BOUTON_FRONT_MODE 				GPIO_IN
 
 
 
 //Leds
+#define LED_RED1_PIN				GPIO_PIN(PORT_D, 12)
+#define LED_RED2_PIN				GPIO_PIN(PORT_A, 11)
+#define LED_GREEN1_PIN				GPIO_PIN(PORT_A, 8)
+#define LED_GREEN2_PIN				GPIO_PIN(PORT_D, 14)
+#define LED_BLUE1_PIN				GPIO_PIN(PORT_D, 13)
+#define LED_BLUE2_PIN				GPIO_PIN(PORT_A, 9)
 
 
+#define LED_RED1_MASK           (1 << 12)
+#define LED_RED2_MASK           (1 << 11)
+#define LED2_GREEN1_MASK        (1 << 8)
+#define LED2_GREEN2_MASK        (1 << 14)
+#define LED_BLUE1_MASK			(1 << 13)
+#define LED_BLUE2_MASK			(1 << 9)
 
+#define LED_RED1_ON             (GPIOB->ODR &= ~LED_RED1_MASK)
+#define LED_RED1_OFF            (GPIOB->ODR |=  LED_RED1_MASK)
+#define LED_RED1_TOGGLE         (GPIOB->ODR ^=  LED_RED1_MASK)
+
+#define LED_RED2_ON             (GPIOB->ODR &= ~LED_RED2_MASK)
+#define LED_RED2_OFF            (GPIOB->ODR |=  LED_RED2_MASK)
+#define LED_RED2_TOGGLE         (GPIOB->ODR ^=  LED_RED2_MASK)
+
+#define LED_GREEN1_ON             (GPIOB->ODR &= ~LED_GREEN1_MASK)
+#define LED_GREEN1_OFF            (GPIOB->ODR |=  LED_GREEN1_MASK)
+#define LED_GREEN1_TOGGLE         (GPIOB->ODR ^=  LED_GREEN1_MASK)
+
+#define LED_GREEN2_ON             (GPIOB->ODR &= ~LED_GREEN2_MASK)
+#define LED_GREEN2_OFF            (GPIOB->ODR |=  LED_GREEN2_MASK)
+#define LED_GREEN2_TOGGLE         (GPIOB->ODR ^=  LED_GREEN2_MASK)
+
+#define LED_BLUE1_ON             (GPIOB->ODR &= ~LED_BLUE1_MASK)
+#define LED_BLUE1_OFF            (GPIOB->ODR |=  LED_BLUE1_MASK)
+#define LED_BLUE1_TOGGLE         (GPIOB->ODR ^=  LED_BLUE1_MASK)
+
+#define LED_BLUE2_ON             (GPIOB->ODR &= ~LED_BLUE2_MASK)
+#define LED_BLUE2_OFF            (GPIOB->ODR |=  LED_BLUE2_MASK)
+#define LED_BLUE2_TOGGLE         (GPIOB->ODR ^=  LED_BLUE2_MASK)
 /**@}*/
 
 
