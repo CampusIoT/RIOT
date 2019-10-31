@@ -7,11 +7,11 @@
  */
 
 /**
- * @ingroup     boards_idosens_remote
+ * @ingroup     boards_idosens_sensor
  * @{
  *
  * @file
- * @brief       Board specific definitions for the idosens_remote board
+ * @brief       Board specific definitions for the idosens_sensor board
  *
  * @author      Germain Lemasson <germain.lemasson@univ-grenoble-alpes.fr>
  */
