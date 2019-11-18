@@ -26,5 +26,6 @@ void board_init(void)
 {
     /* initialize the CPU */
     cpu_init();
-    
+    gpio_init(CTRL_SENSORS_VCC_PIN, GPIO_OUT);
+    gpio_set(CTRL_SENSORS_VCC_PIN);
 }

@@ -46,6 +46,15 @@ extern "C" {
 
 /** @} */
 
+#define CTRL_SENSORS_VCC_PIN	            GPIO_PIN(PORT_B, 0)
+
+#define CTRL_SENSORS_VCC_MASK           (1 << 0)
+
+#define CTRL_SENSORS_VCC_ON             (GPIOB->ODR &= ~CTRL_SENSORS_VCC_MASK)
+#define CTRL_SENSORS_VCC_OFF            (GPIOB->ODR |=  CTRL_SENSORS_VCC_MASK)
+#define CTRL_SENSORS_VCC_TOGGLE         (GPIOB->ODR ^=  CTRL_SENSORS_VCC_MASK)
+
+
 /**
  * @brief   Initialize board specific hardware, including clock, LEDs and std-IO
  */
