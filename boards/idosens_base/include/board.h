@@ -100,29 +100,29 @@ extern "C" {
 #define LED_BLUE1_MASK			(1 << 13)
 #define LED_BLUE2_MASK			(1 << 9)
 
-#define LED_RED1_ON             (GPIOB->ODR &= ~LED_RED1_MASK)
-#define LED_RED1_OFF            (GPIOB->ODR |=  LED_RED1_MASK)
-#define LED_RED1_TOGGLE         (GPIOB->ODR ^=  LED_RED1_MASK)
+#define LED_RED1_ON             (GPIOD->ODR &= ~LED_RED1_MASK)
+#define LED_RED1_OFF            (GPIOD->ODR |=  LED_RED1_MASK)
+#define LED_RED1_TOGGLE         (GPIOD->ODR ^=  LED_RED1_MASK)
 
-#define LED_RED2_ON             (GPIOB->ODR &= ~LED_RED2_MASK)
-#define LED_RED2_OFF            (GPIOB->ODR |=  LED_RED2_MASK)
-#define LED_RED2_TOGGLE         (GPIOB->ODR ^=  LED_RED2_MASK)
+#define LED_RED2_ON             (GPIOA->ODR &= ~LED_RED2_MASK)
+#define LED_RED2_OFF            (GPIOA->ODR |=  LED_RED2_MASK)
+#define LED_RED2_TOGGLE         (GPIOA->ODR ^=  LED_RED2_MASK)
 
-#define LED_GREEN1_ON             (GPIOB->ODR &= ~LED_GREEN1_MASK)
-#define LED_GREEN1_OFF            (GPIOB->ODR |=  LED_GREEN1_MASK)
-#define LED_GREEN1_TOGGLE         (GPIOB->ODR ^=  LED_GREEN1_MASK)
+#define LED_GREEN1_ON             (GPIOA->ODR &= ~LED_GREEN1_MASK)
+#define LED_GREEN1_OFF            (GPIOA->ODR |=  LED_GREEN1_MASK)
+#define LED_GREEN1_TOGGLE         (GPIOA->ODR ^=  LED_GREEN1_MASK)
 
-#define LED_GREEN2_ON             (GPIOB->ODR &= ~LED_GREEN2_MASK)
-#define LED_GREEN2_OFF            (GPIOB->ODR |=  LED_GREEN2_MASK)
-#define LED_GREEN2_TOGGLE         (GPIOB->ODR ^=  LED_GREEN2_MASK)
+#define LED_GREEN2_ON             (GPIOD->ODR &= ~LED_GREEN2_MASK)
+#define LED_GREEN2_OFF            (GPIOD->ODR |=  LED_GREEN2_MASK)
+#define LED_GREEN2_TOGGLE         (GPIOD->ODR ^=  LED_GREEN2_MASK)
 
-#define LED_BLUE1_ON             (GPIOB->ODR &= ~LED_BLUE1_MASK)
-#define LED_BLUE1_OFF            (GPIOB->ODR |=  LED_BLUE1_MASK)
-#define LED_BLUE1_TOGGLE         (GPIOB->ODR ^=  LED_BLUE1_MASK)
+#define LED_BLUE1_ON             (GPIOD->ODR &= ~LED_BLUE1_MASK)
+#define LED_BLUE1_OFF            (GPIOD->ODR |=  LED_BLUE1_MASK)
+#define LED_BLUE1_TOGGLE         (GPIOD->ODR ^=  LED_BLUE1_MASK)
 
-#define LED_BLUE2_ON             (GPIOB->ODR &= ~LED_BLUE2_MASK)
-#define LED_BLUE2_OFF            (GPIOB->ODR |=  LED_BLUE2_MASK)
-#define LED_BLUE2_TOGGLE         (GPIOB->ODR ^=  LED_BLUE2_MASK)
+#define LED_BLUE2_ON             (GPIOA->ODR &= ~LED_BLUE2_MASK)
+#define LED_BLUE2_OFF            (GPIOA->ODR |=  LED_BLUE2_MASK)
+#define LED_BLUE2_TOGGLE         (GPIOA->ODR ^=  LED_BLUE2_MASK)
 /**@}*/
 
 
