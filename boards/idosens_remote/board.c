@@ -18,6 +18,7 @@
  * @}
  */
 
+#include "cpu.h"
 #include "board.h"
 #include "periph/gpio.h"
 

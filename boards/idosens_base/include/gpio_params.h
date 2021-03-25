@@ -7,7 +7,7 @@
  */
 
 /**
- * @ingroup     boards_idosens_remote
+ * @ingroup     boards_idosens_base
  * @{
  *
  * @file

@@ -34,7 +34,7 @@ static const  saul_gpio_params_t saul_gpio_params[] =
 {
     {
         .name = "CTRL Sensors VCC",
-        .pin = CTRL_SENSORS_VCC,
+        .pin = CTRL_SENSORS_VCC_PIN,
         .mode = GPIO_OUT
     }
 };

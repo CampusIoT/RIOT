@@ -5,18 +5,18 @@ INCLUDES += -I$(RIOTBOARD)/common/stm32/include
 # configure the serial terminal
 PORT_LINUX ?= /dev/ttyACM0
 PORT_LINUX ?= /dev/ttyUSB0
-PORT_DARWIN ?= $(firstword $(sort $(wildcard /dev/tty.usbmodem*)))
 
-# setup serial terminal
-include $(RIOTMAKE)/tools/serial.inc.mk
 
-# nucleo boards can become un-flashable after a hardfault,
-# use connect_assert_srst to always be able to flash or reset the boards.
-export OPENOCD_RESET_USE_CONNECT_ASSERT_SRST ?= 1
+# this board uses openocd with st-link
+PROGRAMMER ?= openocd
+OPENOCD_DEBUG_ADAPTER ?= stlink
+OPENCD_STLINK_VERSION ?= 2
 
-# all Nucleo boards have an on-board ST-link adapter
-DEBUG_ADAPTER ?= stlink
-STLINK_VERSION ?= 2
+# This board can become un-flashable after a hardfault,
+# use connect_assert_srst to always be able to flash or reset the board.
+OPENOCD_RESET_USE_CONNECT_ASSERT_SRST ?= 1
 
-# nucleo boards use openocd
-include $(RIOTMAKE)/tools/openocd.inc.mk
+# openocd programmer is supported
+PROGRAMMERS_SUPPORTED += openocd
+
+

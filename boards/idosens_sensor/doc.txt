@@ -1,5 +1,5 @@
 /**
- * @defgroup    boards_idosens_base Idosens Base
+ * @defgroup    boards_idosens_sensor Idosens Sensor
  * @ingroup     boards
  * @brief       Support for the Idosens Base board.
  *

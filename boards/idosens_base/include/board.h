@@ -7,11 +7,11 @@
  */
 
 /**
- * @ingroup     boards_idosens_remote
+ * @ingroup     boards_idosens_base
  * @{
  *
  * @file
- * @brief       Board specific definitions for the idosens_remote board
+ * @brief       Board specific definitions for the idosens_base board
  *
  * @author      Clément Monaton, Germain Lemasson <germain.lemasson@univ-grenoble-alpes.fr>
  */
