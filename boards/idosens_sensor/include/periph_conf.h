@@ -86,6 +86,10 @@ static const spi_conf_t spi_config[] = {
         .cs_pin   = GPIO_UNDEF,
         .rccmask  = RCC_APB1ENR_SPI2EN,
         .apbbus   = APB1,
+        .mosi_af  = GPIO_AF5,
+        .miso_af  = GPIO_AF5,
+        .sclk_af  = GPIO_AF5,
+        .cs_af    = GPIO_AF5,
     }
 };
 

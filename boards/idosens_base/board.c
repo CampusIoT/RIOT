@@ -33,10 +33,12 @@ void board_init(void)
 	gpio_init(LED_GREEN2_PIN, GPIO_OUT);
     gpio_init(LED_BLUE1_PIN, GPIO_OUT);
     gpio_init(LED_BLUE2_PIN, GPIO_OUT);
-    gpio_clear(LED_RED1_PIN);
+    gpio_set(LED_RED1_PIN);
     gpio_set(LED_RED2_PIN);
     gpio_set(LED_GREEN1_PIN);
 	gpio_set(LED_GREEN2_PIN);
     gpio_set(LED_BLUE1_PIN);
     gpio_set(LED_BLUE2_PIN);
+    
+    gpio_clear(AUDIO_SHDN_PIN);
 }

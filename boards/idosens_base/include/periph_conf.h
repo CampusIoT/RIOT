@@ -31,12 +31,13 @@
 #endif
 #define CLOCK_HSE               MHZ(8)
 
+#define RTT_FREQUENCY RTT_MAX_FREQUENCY
+
 #include <stdint.h>
 
-#include "cpu.h"
 #include "periph_cpu.h"
 #include "clk_conf.h"
-
+//#include "cfg_rtt_default.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -103,11 +104,29 @@ static const spi_conf_t spi_config[] = {
         .cs_pin   = GPIO_UNDEF,
         .rccmask  = RCC_APB1ENR_SPI2EN,
         .apbbus   = APB1
+    },
+    {
+        .dev      = SPI1,
+        .mosi_pin = GPIO_PIN(PORT_A, 7),
+        .miso_pin = GPIO_PIN(PORT_A, 6),
+        .sclk_pin = GPIO_PIN(PORT_A, 5),
+        .cs_pin   = GPIO_UNDEF,
+        .rccmask  = RCC_APB2ENR_SPI1EN,
+        .apbbus   = APB2
     }
 };
 
 #define SPI_NUMOF           ARRAY_SIZE(spi_config)
 
+/**
+ * @name    ADC configuration
+ * @{
+ */
+static const adc_conf_t adc_config[] = {
+    { GPIO_PIN(PORT_A, 1), 0, 1 }
+};
+
+#define ADC_NUMOF           ARRAY_SIZE(adc_config)
 
 #ifdef __cplusplus
 }

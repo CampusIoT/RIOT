@@ -44,32 +44,15 @@ extern "C" {
 
 
 #define SX127X_PARAM_SPI                    (SPI_DEV(0))
-
-
-
 #define SX127X_PARAM_SPI_NSS                GPIO_PIN(PORT_B, 10)       /* D10 */
-
-
-
 #define SX127X_PARAM_RESET                  GPIO_PIN(PORT_B, 12)       /* A0 */
-
-
-
 #define SX127X_PARAM_DIO0                   GPIO_PIN(PORT_E, 14)      /* D2 */
-
-
-
 #define SX127X_PARAM_DIO1                   GPIO_PIN(PORT_E, 13)       /* D3 */
-
-
-
 #define SX127X_PARAM_DIO2                   GPIO_PIN(PORT_E, 12)       /* D4 */
-
-
-
 #define SX127X_PARAM_DIO3                   GPIO_PIN(PORT_E, 11)       /* D5 */
 
 
+/**@}*/
 
 //Boutons
 
@@ -123,8 +106,9 @@ extern "C" {
 #define LED_BLUE2_ON             (GPIOA->ODR &= ~LED_BLUE2_MASK)
 #define LED_BLUE2_OFF            (GPIOA->ODR |=  LED_BLUE2_MASK)
 #define LED_BLUE2_TOGGLE         (GPIOA->ODR ^=  LED_BLUE2_MASK)
-/**@}*/
 
+
+#define AUDIO_SHDN_PIN              GPIO_PIN(PORT_C,1)
 
 
 /**
